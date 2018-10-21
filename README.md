@@ -11,7 +11,9 @@ A simple Kanban board created with ClojureScript/Reagent.
 * [Leiningen](http://leiningen.org/)
 
     $ brew install java
+
     $ brew install clojure
+    
     $ brew install leiningen
 
 ### Usage
