@@ -4,11 +4,12 @@
             [simple-kanban.state :as state]))
 
 (defn component []
-  [:div [:input {:type "text"
-                 :value @state/new-task-description
-                 :on-change #(reset! state/new-task-description (-> % .-target .-value))
-                 :placeholder "Description..."
-                 :autoFocus true}]
+  [:div
+   [:input {:type "text"
+            :value @state/new-task-description
+            :on-change #(reset! state/new-task-description (-> % .-target .-value))
+            :placeholder "Description..."
+            :autoFocus true}]
    [:input {:type "text"
             :value @state/new-task-owner
             :on-change #(reset! state/new-task-owner (-> % .-target .-value))

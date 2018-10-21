@@ -5,7 +5,10 @@
 
 (defn component [card cards button-text advance-to]
   ^{:key card}
-  [:li [:b "Task: "] (utils/card-data card :task) [:br] [:b "Owner: "] (utils/card-data card :owner)
+  [:li
+   [:b "Task: "] (utils/card-data card :task)
+   [:br]
+   [:b "Owner: "] (utils/card-data card :owner)
    [:br]
    [:button {:class "advance-card-button" :on-click #(actions/advance-card card cards advance-to)}
     button-text]])
