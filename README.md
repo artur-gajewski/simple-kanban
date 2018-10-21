@@ -3,6 +3,8 @@
 
 A simple Kanban board created with ClojureScript/Reagent.
 
+![screenshot](screenshot.png)
+
 ### Prerequisites
 
 * Java JDK
