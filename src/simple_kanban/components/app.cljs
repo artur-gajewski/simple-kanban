@@ -1,14 +1,12 @@
 (ns simple-kanban.components.app
-  (:require [simple-kanban.components.backlog-section :as backlog-section]
-            [simple-kanban.components.in-development-section :as in-development-section]
-            [simple-kanban.components.in-test-section :as in-test-section]
-            [simple-kanban.components.done-section :as done-section]))
+  (:require [simple-kanban.components.section :as section]
+            [simple-kanban.state :as state]))
 
 (defn component []
   [:div {:class "app"}
    [:h1 {:id "title"} "Simple Kanban"]
    [:div {:class "container"}
-    (backlog-section/component)
-    (in-development-section/component)
-    (in-test-section/component)
-    (done-section/component)]])
+    (section/component "Backlog" "Advance" state/in-backlog state/in-dev true)
+    (section/component "In Development" "Advance" state/in-dev state/in-test false)
+    (section/component "In Testing" "Advance" state/in-test state/in-done false)
+    (section/component "Done" "Archive" state/in-done nil false)]])
