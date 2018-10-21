@@ -16,6 +16,7 @@ To start this application:
 
     $ lein figwheel
 
+Open your browser at [http://localhost:3449](http://localhost:3449)
 
 ## About
 
