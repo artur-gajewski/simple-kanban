@@ -10,6 +10,10 @@ A simple Kanban board created with ClojureScript/Reagent.
 * Java JDK
 * [Leiningen](http://leiningen.org/)
 
+    $ brew install java
+    $ brew install clojure
+    $ brew install leiningen
+
 ### Usage
 
 To start this application:
