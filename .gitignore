@@ -15,4 +15,5 @@ pom.xml.asc
 *.log
 /.env
 /.idea
+/.DS_Store
 
