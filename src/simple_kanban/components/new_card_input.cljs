@@ -7,12 +7,12 @@
   [:div
    [:input {:type "text"
             :value @state/new-task-description
-            :on-change #(state/on-change state/new-task-description %)
+            :on-change #(reset! state/new-task-description (-> % .-target .-value))
             :placeholder "Description..."
             :autoFocus true}]
    [:input {:type "text"
             :value @state/new-task-owner
-            :on-change #(state/on-change state/new-task-owner %)
+            :on-change #(reset! state/new-task-owner (-> % .-target .-value))
             :placeholder "Owner..."}]
    [:button {:class "create-card-button"
              :on-click #(actions/add-card-to-backlog @state/new-task-description @state/new-task-owner)

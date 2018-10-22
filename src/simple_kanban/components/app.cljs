@@ -6,7 +6,7 @@
   [:div {:class "app"}
    [:h1 {:id "title"} "Simple Kanban"]
    [:div {:class "container"}
-    (section/component "Backlog" "Advance" state/in-backlog state/in-dev true)
-    (section/component "In Development" "Advance" state/in-dev state/in-test false)
-    (section/component "In Testing" "Advance" state/in-test state/in-done false)
-    (section/component "Done" "Archive" state/in-done nil false)]])
+    (section/component "Backlog" "Advance" state/in-backlog state/in-dev true false)
+    (section/component "In Development" "Advance" state/in-dev state/in-test false true)
+    (section/component "In Testing" "Advance" state/in-test state/in-done false false)
+    (section/component "Done" "Archive" state/in-done nil false false)]])
