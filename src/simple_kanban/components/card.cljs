@@ -5,7 +5,7 @@
 (defn component [card cards button-text advance-to]
   ^{:key card}
   [:li
-   [:b "Task: "] (utils/card-data card :task)
+   [:b "Task: "] (utils/card-data card :description)
    [:br]
    [:b "Owner: "] (utils/card-data card :owner)
    [:br]

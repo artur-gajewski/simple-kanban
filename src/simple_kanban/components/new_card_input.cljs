@@ -14,7 +14,8 @@
             :value @state/new-task-owner
             :on-change #(state/on-change state/new-task-owner %)
             :placeholder "Owner..."}]
-   [:button {:class "create-card-button" :on-click #(actions/add-card-to-backlog)
+   [:button {:class "create-card-button"
+             :on-click #(actions/add-card-to-backlog @state/new-task-description @state/new-task-owner)
              :disabled
              (or
               (= (count @state/new-task-description) 0)
