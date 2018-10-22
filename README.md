@@ -7,12 +7,14 @@ A simple Kanban board created with ClojureScript/Reagent.
 
 ### Prerequisites
 
-* Java JDK
+* Java 8 JDK
 * [Leiningen](http://leiningen.org/)
 
 Install using Brew:
 
-    $ brew install java
+    $ brew tap caskroom/versions
+    
+    $ brew cask install java8
 
     $ brew install clojure
     
