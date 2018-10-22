@@ -1,6 +1,5 @@
 (ns simple-kanban.components.new-card-input
   (:require [simple-kanban.actions :as actions]
-            [simple-kanban.utils :as utils]
             [simple-kanban.state :as state]))
 
 (defn component []

@@ -1,7 +1,6 @@
 (ns simple-kanban.components.card
   (:require [simple-kanban.actions :as actions]
-            [simple-kanban.utils :as utils]
-            [simple-kanban.state :as state]))
+            [simple-kanban.utils :as utils]))
 
 (defn component [card cards button-text advance-to]
   ^{:key card}

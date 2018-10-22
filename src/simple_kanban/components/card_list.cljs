@@ -1,8 +1,6 @@
 (ns simple-kanban.components.card-list
   (:require
-   [simple-kanban.components.card :as card]
-   [simple-kanban.utils :as utils]
-   [simple-kanban.state :as state]))
+   [simple-kanban.components.card :as card]))
 
 (defn component [cards button-text advance-to]
   [:ul
