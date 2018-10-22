@@ -8,3 +8,6 @@
 (defonce new-task-description (reagent/atom ""))
 (defonce new-task-owner (reagent/atom ""))
 (defonce id-counter (reagent/atom 0))
+
+(defn on-change [state value]
+  (reset! state (-> value .-target .-value)))

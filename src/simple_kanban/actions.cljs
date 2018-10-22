@@ -18,8 +18,10 @@
     (swap! destination assoc id {:id id :task task :completed completed :owner owner}))
   (remove-card (utils/card-data card :id) cards))
 
-(defn add-card-to-backlog [task owner]
-  (let [id (swap!
+(defn add-card-to-backlog []
+  (let [description @state/new-task-description
+        owner @state/new-task-owner
+        id (swap!
             state/id-counter inc)]
-    (swap! state/in-backlog assoc id {:id id :task task :completed false :owner owner}))
+    (swap! state/in-backlog assoc id {:id id :task description :completed false :owner owner}))
   (reset-inputs))
