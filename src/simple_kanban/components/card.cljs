@@ -3,7 +3,7 @@
             [simple-kanban.utils :as utils]))
 
 (defn component [card cards button-text advance-to]
-  ^{:key card}
+  ^{:key (utils/card-data card :id)}
   [:li
    [:b "Task: "] (utils/card-data card :description)
    [:br]
