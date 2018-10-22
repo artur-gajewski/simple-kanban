@@ -6,6 +6,7 @@
 
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
                  [org.clojure/clojurescript "1.9.562" :scope "provided"]
+                 [javax.xml.bind/jaxb-api "2.3.0"]
                  [reagent "0.6.1"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
