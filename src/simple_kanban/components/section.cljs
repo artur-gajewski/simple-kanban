@@ -1,7 +1,6 @@
 (ns simple-kanban.components.section
   (:require [simple-kanban.components.new-card-input :as new-card-input]
-            [simple-kanban.components.card-list :as card-list]
-            [simple-kanban.state :as state]))
+            [simple-kanban.components.card-list :as card-list]))
 
 (defn component [title button-text section-state advance-to is-backlog enable-alert]
   [:div {:class "section"}
