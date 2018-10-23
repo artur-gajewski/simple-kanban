@@ -1,21 +1,22 @@
 (ns simple-kanban.components.new-card-input
-  (:require [simple-kanban.actions :as actions]
-            [simple-kanban.state :as state]))
+  (:require [simple-kanban.actions :refer [add-card-to-backlog]]
+            [simple-kanban.state :refer [new-task-description
+                                         new-task-owner]]))
 
 (defn render []
   [:div
    [:input {:type "text"
-            :value @state/new-task-description
-            :on-change #(reset! state/new-task-description (-> % .-target .-value))
+            :value @new-task-description
+            :on-change #(reset! new-task-description (-> % .-target .-value))
             :placeholder "Description..."
             :autoFocus true}]
    [:input {:type "text"
-            :value @state/new-task-owner
-            :on-change #(reset! state/new-task-owner (-> % .-target .-value))
+            :value @new-task-owner
+            :on-change #(reset! new-task-owner (-> % .-target .-value))
             :placeholder "Owner..."}]
    [:button {:class "create-card-button"
-             :on-click #(actions/add-card-to-backlog @state/new-task-description @state/new-task-owner)
+             :on-click #(add-card-to-backlog @new-task-description @new-task-owner)
              :disabled
              (or
-              (= (count @state/new-task-description) 0)
-              (= (count @state/new-task-owner) 0))} "Add new task"]])
+              (= (count @new-task-description) 0)
+              (= (count @new-task-owner) 0))} "Add new task"]])
