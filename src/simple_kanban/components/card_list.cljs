@@ -2,7 +2,7 @@
   (:require
    [simple-kanban.components.card :as card]))
 
-(defn render [cards button-text advance-to]
+(defn render [current-section-cards button-text next-section-cards]
   [:ul
-   (for [card @cards]
-     [card/render card cards button-text advance-to])])
+   (for [card @current-section-cards]
+     [card/render card current-section-cards button-text next-section-cards])])
