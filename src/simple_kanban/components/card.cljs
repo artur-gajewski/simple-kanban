@@ -2,7 +2,7 @@
   (:require [simple-kanban.actions :as actions]
             [simple-kanban.utils :as utils]))
 
-(defn component [card cards button-text advance-to]
+(defn render [card cards button-text advance-to]
   ^{:key (utils/card-data card :id)}
   [:li
    [:b "Task: "] (utils/card-data card :description)

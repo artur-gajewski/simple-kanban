@@ -2,7 +2,7 @@
   (:require [simple-kanban.actions :as actions]
             [simple-kanban.state :as state]))
 
-(defn component []
+(defn render []
   [:div
    [:input {:type "text"
             :value @state/new-task-description

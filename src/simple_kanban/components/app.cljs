@@ -2,11 +2,11 @@
   (:require [simple-kanban.components.section :as section]
             [simple-kanban.state :as state]))
 
-(defn component []
+(defn render []
   [:div {:class "app"}
    [:h1 {:id "title"} "Simple Kanban"]
    [:div {:class "container"}
-    (section/component "Backlog" "Advance" state/in-backlog state/in-dev true false)
-    (section/component "In Development" "Advance" state/in-dev state/in-test false true)
-    (section/component "In Testing" "Advance" state/in-test state/in-done false false)
-    (section/component "Done" "Archive" state/in-done nil false false)]])
+    [section/render "Backlog" "Advance" state/in-backlog state/in-dev true false]
+    [section/render "In Development" "Advance" state/in-dev state/in-test false true]
+    [section/render "In Testing" "Advance" state/in-test state/in-done false false]
+    [section/render "Done" "Archive" state/in-done nil false false]]])

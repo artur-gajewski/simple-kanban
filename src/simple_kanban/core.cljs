@@ -3,7 +3,7 @@
             [simple-kanban.components.app :as app]))
 
 (defn mount-root []
-  (reagent/render [app/component] (.getElementById js/document "app")))
+  (reagent/render [app/render] (.getElementById js/document "app")))
 
 (defn init! []
   (mount-root))
