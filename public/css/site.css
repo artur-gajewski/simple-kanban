@@ -42,9 +42,9 @@ body {
     margin-bottom: 10px;
 }
 
-span.alert {
-    margin-left: 5px;
-    color: red;
+.alert {
+    background-color: red;
+    color: white;
 }
 
 ul li {
