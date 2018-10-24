@@ -1,0 +1,19 @@
+{
+  "name": "simple-kanban",
+  "version": "0.0.1",
+  "description": "Simple kanban board web app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artur-gajewski/simple-kanban"
+  },
+  "author": {
+    "name": "Artur Gajewski",
+    "email": "info@arturgajewski.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "lein figwheel",
+    "release": "lein release && cp public/index.html release/public && mkdir -p release/public/css && cp public/css/* release/public/css/",
+    "clean": "lein clean"
+  }
+}

@@ -38,16 +38,14 @@
                          :pretty-print  true}
                         :figwheel
                         {:open-urls ["http://localhost:3449/index.html"]}}
-                       :release
+                      
+                       :production
                        {:source-paths ["src" "env/prod/cljs"]
-                        :compiler
-                        {:output-to "public/js/app.js"
-                         :output-dir "public/js/release"
-                         :asset-path   "js/out"
-                         :optimizations :advanced
-                         :pretty-print false}}}}
-
-  :aliases {"release" ["do" "clean" ["cljsbuild" "once" "release"]]}
+                        :compiler {:output-to "release/public/js/app.js"
+                                   :optimizations :advanced
+                                   :pretty-print false}}}}
+  
+  :aliases {"release" ["do" "clean" ["cljsbuild" "once" "production"]]}
 
   :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.9"]
                                   [org.clojure/tools.nrepl "0.2.12"]

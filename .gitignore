@@ -1,4 +1,5 @@
 /target
+/release
 /classes
 /checkouts
 profiles.clj
@@ -13,6 +14,7 @@ pom.xml.asc
 /out
 /.repl
 *.log
+*.iml
 /.env
 /.idea
 /.DS_Store
