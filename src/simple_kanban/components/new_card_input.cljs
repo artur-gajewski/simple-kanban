@@ -3,7 +3,7 @@
             [simple-kanban.state :refer [new-task-description
                                          new-task-owner]]))
 
-(defn render []
+(defn new-card-input []
   [:div
    [:input {:type "text"
             :value @new-task-description

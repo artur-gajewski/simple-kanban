@@ -1,8 +1,7 @@
 (ns simple-kanban.components.card-list
-  (:require
-   [simple-kanban.components.card :as card]))
+  (:require [simple-kanban.components.card :refer [card]]))
 
-(defn render [current-section-cards button-text next-section-cards]
+(defn card-list [current-section-cards button-text next-section-cards]
   [:ul
-   (for [card @current-section-cards]
-     [card/render card current-section-cards button-text next-section-cards])])
+   (for [task @current-section-cards]
+     (card task current-section-cards button-text next-section-cards))])

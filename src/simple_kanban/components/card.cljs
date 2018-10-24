@@ -1,13 +1,12 @@
 (ns simple-kanban.components.card
-  (:require [simple-kanban.actions :refer [advance-card]]
-            [simple-kanban.utils :refer [card-data]]))
+  (:require [simple-kanban.actions :refer [advance-card]]))
 
-(defn render [card current-section-cards button-text next-section-cards]
-  ^{:key (card-data card :id)}
-  [:li
-   [:b "Task: "] (card-data card :description)
-   [:br]
-   [:b "Owner: "] (card-data card :owner)
-   [:br]
-   [:button {:class "advance-card-button" :on-click #(advance-card card current-section-cards next-section-cards)}
-    button-text]])
+(defn card [task current-section-cards button-text next-section-cards]
+    ^{:key (get (val task) :id)}
+    [:li
+     [:b "Task: "] (get (val task) :description)
+     [:br]
+     [:b "Owner: "] (get (val task) :owner)
+     [:br]
+     [:button {:class "advance-card-button" :on-click #(advance-card task current-section-cards next-section-cards)}
+      button-text]])
