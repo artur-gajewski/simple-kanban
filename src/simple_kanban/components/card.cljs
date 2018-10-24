@@ -2,11 +2,13 @@
   (:require [simple-kanban.actions :refer [advance-card]]))
 
 (defn card [task current-section-cards button-text next-section-cards]
-    ^{:key (get (val task) :id)}
+  (let [{:keys [id description owner]} (val task)]
+    ^{:key id}
     [:li
-     [:b "Task: "] (get (val task) :description)
+     [:b "Task: "] description
      [:br]
-     [:b "Owner: "] (get (val task) :owner)
+     [:b "Owner: "] owner
      [:br]
-     [:button {:class "advance-card-button" :on-click #(advance-card task current-section-cards next-section-cards)}
-      button-text]])
+     [:button {:class "advance-card-button" 
+               :on-click #(advance-card task current-section-cards next-section-cards)}
+      button-text]]))

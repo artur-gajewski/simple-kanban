@@ -12,10 +12,7 @@
   (swap! current-section-cards dissoc id))
 
 (defn advance-card [task current-section-cards next-section-cards]
-  (let [id (get (val task) :id)
-        description (get (val task) :description)
-        completed (get (val task) :completed)
-        owner (get (val task) :owner)]
+  (let [{:keys [id description completed owner]} (val task)]
     (remove-card id current-section-cards)
     (if-not (nil? next-section-cards)
       (swap! next-section-cards assoc id {:id id
