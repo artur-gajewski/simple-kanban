@@ -49,4 +49,5 @@
 
   :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.9"]
                                   [org.clojure/tools.nrepl "0.2.12"]
-                                  [com.cemerick/piggieback "0.2.2-SNAPSHOT"]]}})
+                                  [com.cemerick/piggieback "0.2.2-SNAPSHOT"]
+                                  [metosin/potpuri "0.5.1"]]}})

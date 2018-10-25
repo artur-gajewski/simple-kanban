@@ -1,5 +1,6 @@
 (ns simple-kanban.actions
-  (:require [simple-kanban.state :refer [id-counter
+  (:require [potpuri.core :refer [map-of]]
+            [simple-kanban.state :refer [id-counter
                                          in-backlog
                                          new-task-description
                                          new-task-owner]]))
@@ -19,7 +20,5 @@
 
 (defn add-card-to-backlog [description owner]
   (let [id (swap! id-counter inc)]
-    (swap! in-backlog assoc id {:id id
-                                :description description
-                                :owner owner}))
-  (reset-inputs))
+    (swap! in-backlog assoc id (map-of id description owner))
+    (reset-inputs)))
