@@ -5,10 +5,11 @@
   (let [{:keys [id description owner]} (val task)]
     ^{:key id}
     [:li
-     [:b "Task: "] description
-     [:br]
-     [:b "Owner: "] owner
-     [:br]
-     [:button {:class "advance-card-button" 
-               :on-click #(advance-card task current-section-cards next-section-cards)}
-      button-text]]))
+     [:div
+      [:b "Task: "] description]
+     [:div
+      [:b "Owner: "] owner]
+     [:div
+      [:button {:class "advance-card-button"
+                :on-click #(advance-card task current-section-cards next-section-cards)}
+       button-text]]]))

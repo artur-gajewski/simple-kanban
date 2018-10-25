@@ -15,9 +15,7 @@
   (let [{:keys [id description owner]} (val task)]
     (remove-card id current-section-cards)
     (if-not (nil? next-section-cards)
-      (swap! next-section-cards assoc id {:id id
-                                          :description description
-                                          :owner owner}))))
+      (swap! next-section-cards assoc id (val task)))))
 
 (defn add-card-to-backlog [description owner]
   (let [id (swap! id-counter inc)]
