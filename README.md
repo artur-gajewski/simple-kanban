@@ -22,11 +22,19 @@ Install using Brew:
 
 ### Usage
 
-To start this application:
+To start this application, use either ways:
 
-    $ lein figwheel
+    $ yarn dev
 
-Open your browser at [http://localhost:3449](http://localhost:3449)
+This will open your browser to [http://localhost:3449](http://localhost:3449)
+
+### Build
+
+To create a production release build:
+
+    $ yarn release
+
+This will compile application to an optimized `app.js` file and copy `index.html` and all required files to `release` folder.
 
 ## About
 
