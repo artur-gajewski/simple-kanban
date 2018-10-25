@@ -1,0 +1,11 @@
+version: "3.7"
+services: 
+  frontend:
+    restart: "always"  
+    build:
+      dockerfile: "./Dockerfile"
+      context: ./
+    ports:
+      - 3449:3449
+    volumes:
+      - ./:/app
