@@ -7,7 +7,7 @@
 
 (defn app []
   [:div {:class "app"}
-   [:h1 {:id "title"} "Simple Kanban!aa!"]
+   [:h1 {:id "title"} "Simple Kanban"]
    [:div {:class "container"}
     [section "Backlog" "Advance" in-backlog in-dev true false]
     [section "In Development" "Advance" in-dev in-test false true]
