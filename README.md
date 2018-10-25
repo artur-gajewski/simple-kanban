@@ -19,7 +19,7 @@ Install using Brew:
     $ brew install clojure
     
     $ brew install leiningen
-
+    
 ### Usage
 
 To start this application, use either ways:
@@ -35,6 +35,14 @@ To create a production release build:
     $ yarn release
 
 This will compile application to an optimized `app.js` file and copy `index.html` and all required files to `release` folder.
+
+### Docker
+
+To run this application in Docker:
+
+    $ docker-compose up
+
+Simple Kanban will be available at [http://localhost:3449](http://localhost:3449)
 
 ## About
 
