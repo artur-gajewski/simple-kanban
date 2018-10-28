@@ -42,6 +42,8 @@ To run this application in Docker:
 
     $ docker-compose up
 
+Make sure to disable Figwheel's REPL by setting :repl false 
+
 Simple Kanban will be available at [http://localhost:3449](http://localhost:3449)
 
 ## About
